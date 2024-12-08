@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Last Element</title>
+</head>
+<body>
+    <h1>Find the Last Element of an Array</h1>
+    <textarea id="inputArray" rows="4" cols="50" placeholder="Enter array elements separated by commas"></textarea>
+    <br><br>
+    <button onclick="findLastElement()">Find Last Element</button>
+
+    <script>
+        function findLastElement() {
+            const input = document.getElementById('inputArray').value;
+            const array = input.split(',').map(item => item.trim());
+
+            if (array.length === 0 || array[0] === "") {
+                alert("The array is empty. Please enter valid elements.");
+            } else {
+                const lastElement = array[array.length - 1];
+                alert(`The last element is: "${lastElement}"`);
+            }
+        }
+    </script>
+</body>
+</html>
