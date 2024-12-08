@@ -10,6 +10,7 @@
     <textarea id="inputArray" rows="4" cols="50" placeholder="Enter array elements separated by commas"></textarea>
     <br><br>
     <button onclick="findLastElement()">Find Last Element</button>
+    <button onclick="resetInput()">Reset</button>
 
     <script>
         function findLastElement() {
@@ -22,6 +23,10 @@
                 const lastElement = array[array.length - 1];
                 alert(`The last element is: "${lastElement}"`);
             }
+        }
+
+        function resetInput() {
+            document.getElementById('inputArray').value = '';
         }
     </script>
 </body>
